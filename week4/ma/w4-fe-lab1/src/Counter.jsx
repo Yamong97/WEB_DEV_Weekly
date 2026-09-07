@@ -25,6 +25,9 @@ const Counter = () => {
         setCount(prevCount => prevCount - 1);
     };
 
+    const resetHandler = () => {
+        setCount(0);
+    };
     return (
         <div className={`content ${theme}`}>
             <h1>UseState Component</h1>
@@ -36,6 +39,7 @@ const Counter = () => {
 
             <button onClick={incrementHandler}>Increment</button>
             <button onClick={decrementHandler}>Decrement</button>
+            <button onClick={resetHandler}>Reset</button>
         </div>
     );
 };
